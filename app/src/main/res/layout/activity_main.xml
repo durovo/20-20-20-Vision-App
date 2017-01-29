@@ -11,12 +11,13 @@
     tools:context="com.durovo.android.a202020.MainActivity">
 
 
-    <ToggleButton
-        android:text="ToggleButton"
+    <Button
+        android:text="Press for notification"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="194dp"
-        android:id="@+id/toggleButton"
+        android:layout_marginTop="189dp"
+        android:id="@+id/button"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="launchNotification"/>
 </RelativeLayout>

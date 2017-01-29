@@ -9,6 +9,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.support.v7.app.NotificationCompat;
 
+import com.durovo.android.a202020.MainActivity;
 import com.durovo.android.a202020.R;
 import com.durovo.android.a202020.TimerActivity;
 
@@ -20,7 +21,7 @@ public class AppNotification {
     private final static int PENDING_INTENT_ID = 22;
     private final static int NOTIFICATION_ID = 133;
 
-    private void buildNotification(Context context) {
+    public static void buildNotification(Context context) {
         NotificationManager notificationManager = (NotificationManager)
                 context.getSystemService(context.NOTIFICATION_SERVICE);
         Notification notification = new NotificationCompat.Builder(context)
@@ -35,9 +36,9 @@ public class AppNotification {
         notificationManager.notify(NOTIFICATION_ID, notification);
     }
 
-    private PendingIntent buildPendingIntent(Context context) {
+    private static PendingIntent buildPendingIntent(Context context) {
         Intent launchTimerIntent = new Intent(context, TimerActivity.class);
-        PendingIntent launchTimerPI = PendingIntent.getService(context,PENDING_INTENT_ID,
+        PendingIntent launchTimerPI = PendingIntent.getActivity(context,PENDING_INTENT_ID,
                 launchTimerIntent, PendingIntent.FLAG_UPDATE_CURRENT);
         return launchTimerPI;
     }
