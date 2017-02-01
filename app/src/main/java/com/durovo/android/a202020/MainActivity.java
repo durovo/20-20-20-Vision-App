@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.durovo.android.a202020.utils.AppNotification;
+import com.durovo.android.a202020.utils.JobBuilder;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void launchNotification(View view) {
-        AppNotification.buildNotification(this);
+    public void startJob(View view) {
+        JobBuilder.buildJob(this);
     }
 }

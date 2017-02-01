@@ -19,5 +19,5 @@
         android:id="@+id/button"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:onClick="launchNotification"/>
+        android:onClick="startJob"/>
 </RelativeLayout>
